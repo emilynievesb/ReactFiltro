@@ -1,8 +1,106 @@
-# React + Vite
+# Tienda de productos
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Este proyecto consiste en una tienda de productos de varios tipos, en los que podrás hacer un proceso de compra eficaz.
 
-Currently, two official plugins are available:
+## Ejecución
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+Para ejecutar correctamente el servidor debes asegurarte de tener `nodemon`, ya teniendo esta dependencia, solo escribes en la consola:
+
+        npm i
+
+Después
+
+        npm run dev
+
+Seguido de esto
+
+        npm run start
+
+# Endpoints
+
+1.  Post de productos
+
+    - URL: `http://127.0.0.1:3000/api/post/productos`
+    - Método: `POST`
+    - Datos de entrada (body):
+
+    ```
+        [
+           {
+               "_id": "651fff26056a7328dfa6cba7",
+               "nombre": "Tenis Urban Para Hombre Zapatos De Golf De Mujer Air 1 Rojo",
+               "imagen": [
+                   "https://http2.mlstatic.com/D_NQ_NP_2X_877527-CBT69406340833_052023-F.webp",
+                   "https://http2.mlstatic.com/D_NQ_NP_2X_747562-CBT69406340815_052023-F.webp",
+                   "https://http2.mlstatic.com/D_NQ_NP_2X_991580-CBT69406340817_052023-F.webp",
+                   "https://http2.mlstatic.com/D_NQ_NP_2X_843255-CBT69406340823_052023-F.webp",
+                   "https://http2.mlstatic.com/D_NQ_NP_2X_957710-CBT69406340809_052023-F.webp"
+               ],
+               "valoracion": 5,
+               "descripcion": "¡Bienvenido a nuestra tienda, más colores y modelos, visite la tienda! Somos de tamaño estándar europeo, elija el tamaño adecuado de la longitud de los pies si confunde con el tamaño: si sus pies son más gruesos o más salvajes, elija un tamaño más grande tabla de tallas Referencia a continuación: EU35 = MX2.5 = MX22.5 = longitud de los pies 22,5 cm EU36 = MX3 = MX23 = Longitud de los pies 23 cm; EU37 = MX3.5 = MX23.5 = Longitud de los pies 23,5 cm; EU38 = MX4.5 = MX24 = Longitud de los pies 24 cm; EU39 = MX5 = MX24.5 = Longitud de los pies 24,5 cm; EU40 = MX6 = MX25 = Longitud de los pies 25 cm; EU41 = MX6.5 = MX26 = Longitud de los pies 25,5 cm; EU42 = MX7.5 = MX27 = Longitud de los pies 26 cm; EU43 = MX8 = MX27.5 = Longitud de los pies 26,5 cm; Nota: Debido a la diferencia entre diferentes monitores, es posible que la imagen no refleje el color real del artículo. Puede haber una diferencia de 1 a 2 cm debido a la medición manual; comprueba los detalles del tamaño antes de comprar. Gracias por su comprensión. Consejo: antes de realizar un pedido, solicite al servicio de atención al cliente la recomendación de tamaño, ya que la conversión de diferentes tamaños puede ser diferente, puede indicarnos su tamaño mexicano antes de realizar el pedido, podemos recomendarle el tamaño más adecuado para usted y ¡Evite comprar el tamaño incorrecto! Si hay un problema con el producto, no se queje de inmediato, comuníquese con nosotros en el pedido, ¡haremos todo lo posible para resolver el problema por usted! ¡Gracias por su cooperación!",
+               "precio": 171491,
+               "descuento": 0
+           }
+       ]
+    ```
+
+1.  Lista de productos
+
+    - URL: `http://127.0.0.1:3000/api/get/productos`
+    - Método: `GET`
+    - Datos de entrada (query): Ninguno.
+    - Datos de salida:
+
+      ```
+         [
+            {
+                "_id": "651fff26056a7328dfa6cba7",
+                "nombre": "Tenis Urban Para Hombre Zapatos De Golf De Mujer Air 1 Rojo",
+                "imagen": [
+                    "https://http2.mlstatic.com/D_NQ_NP_2X_877527-CBT69406340833_052023-F.webp",
+                    "https://http2.mlstatic.com/D_NQ_NP_2X_747562-CBT69406340815_052023-F.webp",
+                    "https://http2.mlstatic.com/D_NQ_NP_2X_991580-CBT69406340817_052023-F.webp",
+                    "https://http2.mlstatic.com/D_NQ_NP_2X_843255-CBT69406340823_052023-F.webp",
+                    "https://http2.mlstatic.com/D_NQ_NP_2X_957710-CBT69406340809_052023-F.webp"
+                ],
+                "valoracion": 5,
+                "descripcion": "¡Bienvenido a nuestra tienda, más colores y modelos, visite la tienda! Somos de tamaño estándar europeo, elija el tamaño adecuado de la longitud de los pies si confunde con el tamaño: si sus pies son más gruesos o más salvajes, elija un tamaño más grande tabla de tallas Referencia a continuación: EU35 = MX2.5 = MX22.5 = longitud de los pies 22,5 cm EU36 = MX3 = MX23 = Longitud de los pies 23 cm; EU37 = MX3.5 = MX23.5 = Longitud de los pies 23,5 cm; EU38 = MX4.5 = MX24 = Longitud de los pies 24 cm; EU39 = MX5 = MX24.5 = Longitud de los pies 24,5 cm; EU40 = MX6 = MX25 = Longitud de los pies 25 cm; EU41 = MX6.5 = MX26 = Longitud de los pies 25,5 cm; EU42 = MX7.5 = MX27 = Longitud de los pies 26 cm; EU43 = MX8 = MX27.5 = Longitud de los pies 26,5 cm; Nota: Debido a la diferencia entre diferentes monitores, es posible que la imagen no refleje el color real del artículo. Puede haber una diferencia de 1 a 2 cm debido a la medición manual; comprueba los detalles del tamaño antes de comprar. Gracias por su comprensión. Consejo: antes de realizar un pedido, solicite al servicio de atención al cliente la recomendación de tamaño, ya que la conversión de diferentes tamaños puede ser diferente, puede indicarnos su tamaño mexicano antes de realizar el pedido, podemos recomendarle el tamaño más adecuado para usted y ¡Evite comprar el tamaño incorrecto! Si hay un problema con el producto, no se queje de inmediato, comuníquese con nosotros en el pedido, ¡haremos todo lo posible para resolver el problema por usted! ¡Gracias por su cooperación!",
+                "precio": 171491,
+                "descuento": 0
+            },
+            {
+                "_id": "651fff26056a7328dfa6cba7",
+                "nombre": "Tenis Urban Para Hombre Zapatos De Golf De Mujer Air 1 Rojo",
+                "imagen": [
+                    "https://http2.mlstatic.com/D_NQ_NP_2X_877527-CBT69406340833_052023-F.webp",
+                    "https://http2.mlstatic.com/D_NQ_NP_2X_747562-CBT69406340815_052023-F.webp",
+                    "https://http2.mlstatic.com/D_NQ_NP_2X_991580-CBT69406340817_052023-F.webp",
+                    "https://http2.mlstatic.com/D_NQ_NP_2X_843255-CBT69406340823_052023-F.webp",
+                    "https://http2.mlstatic.com/D_NQ_NP_2X_957710-CBT69406340809_052023-F.webp"
+                ],
+                "valoracion": 5,
+                "descripcion": "¡Bienvenido a nuestra tienda, más colores y modelos, visite la tienda! Somos de tamaño estándar europeo, elija el tamaño adecuado de la longitud de los pies si confunde con el tamaño: si sus pies son más gruesos o más salvajes, elija un tamaño más grande tabla de tallas Referencia a continuación: EU35 = MX2.5 = MX22.5 = longitud de los pies 22,5 cm EU36 = MX3 = MX23 = Longitud de los pies 23 cm; EU37 = MX3.5 = MX23.5 = Longitud de los pies 23,5 cm; EU38 = MX4.5 = MX24 = Longitud de los pies 24 cm; EU39 = MX5 = MX24.5 = Longitud de los pies 24,5 cm; EU40 = MX6 = MX25 = Longitud de los pies 25 cm; EU41 = MX6.5 = MX26 = Longitud de los pies 25,5 cm; EU42 = MX7.5 = MX27 = Longitud de los pies 26 cm; EU43 = MX8 = MX27.5 = Longitud de los pies 26,5 cm; Nota: Debido a la diferencia entre diferentes monitores, es posible que la imagen no refleje el color real del artículo. Puede haber una diferencia de 1 a 2 cm debido a la medición manual; comprueba los detalles del tamaño antes de comprar. Gracias por su comprensión. Consejo: antes de realizar un pedido, solicite al servicio de atención al cliente la recomendación de tamaño, ya que la conversión de diferentes tamaños puede ser diferente, puede indicarnos su tamaño mexicano antes de realizar el pedido, podemos recomendarle el tamaño más adecuado para usted y ¡Evite comprar el tamaño incorrecto! Si hay un problema con el producto, no se queje de inmediato, comuníquese con nosotros en el pedido, ¡haremos todo lo posible para resolver el problema por usted! ¡Gracias por su cooperación!",
+                "precio": 171491,
+                "descuento": 0
+            },{
+                "_id": "651fff26056a7328dfa6cba7",
+                "nombre": "Tenis Urban Para Hombre Zapatos De Golf De Mujer Air 1 Rojo",
+                "imagen": [
+                    "https://http2.mlstatic.com/D_NQ_NP_2X_877527-CBT69406340833_052023-F.webp",
+                    "https://http2.mlstatic.com/D_NQ_NP_2X_747562-CBT69406340815_052023-F.webp",
+                    "https://http2.mlstatic.com/D_NQ_NP_2X_991580-CBT69406340817_052023-F.webp",
+                    "https://http2.mlstatic.com/D_NQ_NP_2X_843255-CBT69406340823_052023-F.webp",
+                    "https://http2.mlstatic.com/D_NQ_NP_2X_957710-CBT69406340809_052023-F.webp"
+                ],
+                "valoracion": 5,
+                "descripcion": "¡Bienvenido a nuestra tienda, más colores y modelos, visite la tienda! Somos de tamaño estándar europeo, elija el tamaño adecuado de la longitud de los pies si confunde con el tamaño: si sus pies son más gruesos o más salvajes, elija un tamaño más grande tabla de tallas Referencia a continuación: EU35 = MX2.5 = MX22.5 = longitud de los pies 22,5 cm EU36 = MX3 = MX23 = Longitud de los pies 23 cm; EU37 = MX3.5 = MX23.5 = Longitud de los pies 23,5 cm; EU38 = MX4.5 = MX24 = Longitud de los pies 24 cm; EU39 = MX5 = MX24.5 = Longitud de los pies 24,5 cm; EU40 = MX6 = MX25 = Longitud de los pies 25 cm; EU41 = MX6.5 = MX26 = Longitud de los pies 25,5 cm; EU42 = MX7.5 = MX27 = Longitud de los pies 26 cm; EU43 = MX8 = MX27.5 = Longitud de los pies 26,5 cm; Nota: Debido a la diferencia entre diferentes monitores, es posible que la imagen no refleje el color real del artículo. Puede haber una diferencia de 1 a 2 cm debido a la medición manual; comprueba los detalles del tamaño antes de comprar. Gracias por su comprensión. Consejo: antes de realizar un pedido, solicite al servicio de atención al cliente la recomendación de tamaño, ya que la conversión de diferentes tamaños puede ser diferente, puede indicarnos su tamaño mexicano antes de realizar el pedido, podemos recomendarle el tamaño más adecuado para usted y ¡Evite comprar el tamaño incorrecto! Si hay un problema con el producto, no se queje de inmediato, comuníquese con nosotros en el pedido, ¡haremos todo lo posible para resolver el problema por usted! ¡Gracias por su cooperación!",
+                "precio": 171491,
+                "descuento": 0
+            }
+        ]
+      ```
+
+# Funcionamiento de la página
+
+- Inicialmente te encontrarás con nuestra página base que puede listar los productos y en el botón de la derecha puedes desplegar los distintos productos así como visualizarlos
+  ![Inicio](/src/img/doc.png)
