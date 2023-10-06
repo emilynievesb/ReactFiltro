@@ -125,7 +125,15 @@ function Products() {
               {cardProducto.imagen.map((imagen, index) => (
                 <img key={index} src={imagen} width={"40%"} />
               ))}
-              <Typography variant="h5">{cardProducto.nombre}</Typography>
+              <Typography variant="h5">
+                Descripción: {cardProducto.descripcion}
+              </Typography>
+              <Typography variant="h5">
+                Valoracion: {cardProducto.valoracion}
+              </Typography>
+              <Typography variant="h5">
+                Precio: ${cardProducto.precio}
+              </Typography>
             </div>
           ) : null}
         </Box>
