@@ -152,6 +152,20 @@ db.createCollection("categoria", {
   },
 });
 
-db.categoria.insertOne({
-  nombre: "Zapatos de portivos",
-});
+db.categoria.insertMany([
+  {
+    nombre: "Zapatos de portivos",
+  },
+  {
+    nombre: "Ropa deportivos",
+  },
+  {
+    nombre: "Accesorios",
+  },
+  {
+    nombre: "Camisetas",
+  },
+  {
+    nombre: "Zapato formal",
+  },
+]);
