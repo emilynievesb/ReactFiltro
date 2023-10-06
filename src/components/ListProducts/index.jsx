@@ -23,15 +23,12 @@ export default function ListProducts() {
     <List>
       {productos.length !== 0
         ? productos.map((product, index) => (
-            <div>
-              <ListItem key={index}>
-                <ListItemIcon>
-                  <FolderIcon />
-                </ListItemIcon>
-                <Typography>Producto {index + 1}</Typography>
-              </ListItem>
-              <Divider />
-            </div>
+            <ListItem key={index}>
+              <ListItemIcon>
+                <FolderIcon />
+              </ListItemIcon>
+              <Typography>Producto {index + 1}</Typography>
+            </ListItem>
           ))
         : null}
     </List>
